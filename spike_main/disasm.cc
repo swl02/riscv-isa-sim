@@ -357,6 +357,7 @@ disassembler_t::disassembler_t(int xlen)
   DEFINE_BTYPE(bltu)
   DEFINE_BTYPE(bgeu)
 
+  DEFINE_LTYPE(chk);
   DEFINE_LTYPE(lui);
   DEFINE_LTYPE(auipc);
 

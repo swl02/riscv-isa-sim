@@ -177,6 +177,15 @@ static uint32_t fence_i(void)
   return MATCH_FENCE_I;
 }
 
+//adding chk
+static uint32_t chk(unsigned int dest, uint32_t imm) __attribute__ ((unused));
+static uint32_t chk(unsigned int dest, uint32_t imm)
+{
+  return (bits(imm, 19, 0) << 12) |
+    (dest << 7) |
+    MATCH_CHK;
+}
+
 /*
 static uint32_t lui(unsigned int dest, uint32_t imm) __attribute__ ((unused));
 static uint32_t lui(unsigned int dest, uint32_t imm)
